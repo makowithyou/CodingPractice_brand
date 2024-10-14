@@ -1,0 +1,32 @@
+/* 共通 css */
+:root {
+    --main-bg-color: ;
+    --sub-bg-color: ;
+    --font-color: ;
+    --border-color: ;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    /* https://ics.media/entry/200317/#各osのフォント指定はどれがいいか */
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    margin: unset;
+}
+img {
+    display: block;
+}
+h1, h2, h3, p, ol, dl, dd {
+    margin: unset;
+    padding: unset;
+}
+p.copy {
+}
+div.container {
+    margin: 0 auto;
+}
+
+/* 狭い画面向けの既定の CSS レイアウト値 */
+
+@media (max-width: px) {
+}

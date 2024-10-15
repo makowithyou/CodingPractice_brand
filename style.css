@@ -2,31 +2,125 @@
 :root {
     --main-bg-color: ;
     --sub-bg-color: ;
-    --font-color: ;
+    --font-color: #2D2D2D;
     --border-color: ;
 }
 * {
     box-sizing: border-box;
 }
 body {
-    /* https://ics.media/entry/200317/#各osのフォント指定はどれがいいか */
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    font-family: "Crimson Text", sans-serif; /* https://fonts.google.com/specimen/Crimson+Text */
+    color: var(--font-color);
     margin: unset;
 }
 img {
     display: block;
+    width: 100%;
 }
-h1, h2, h3, p, ol, dl, dd {
+h1, h2, h3, p, ul {
     margin: unset;
     padding: unset;
 }
+a, a:visited {
+    text-decoration: none;
+    color: var(--font-color);
+}
+li {
+    list-style: none;
+}
+h2 {
+    font-size: 24px;
+    font-weight: normal;
+    padding-bottom: 4px;
+}
+h3 {
+    font-size: 16px;
+    font-weight: normal;
+    padding-bottom: 25px;
+}
+p {
+    font-size: 16px;
+    line-height: 1.7;
+}
 p.copy {
+    font-size: 14px;
 }
 div.container {
     margin: 0 auto;
+    width: 1000px;
+    padding: 0 18px;
 }
 
-/* 狭い画面向けの既定の CSS レイアウト値 */
 
-@media (max-width: px) {
+div.mainvisual, div.header_manu {
+    width: 90vw;
+    margin: 0 auto;
+}
+img.logo {
+    width: 110px;
+    height: 14px;
+}
+div.header_manu {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 62px;
+}
+h1 {
+    padding-right: 50px;
+}
+nav ul {
+    display: flex;
+}
+nav li:not(:last-of-type) {
+    padding-right: 30px;
+}
+section.concept {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+section.work {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 60px;
+}
+section img {
+    width: 50%;
+}
+section div {
+    padding: 0 67px;
+}
+footer {
+    padding: 20px 0;
+}
+footer div.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+div.container {
+    width: 100%;
+}
+div.header_manu {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+section {
+    flex-direction: column;
+}
+section.concept,
+section.work {
+    flex-direction: column;
+}
+section img {
+    width: 100%;
+    padding-bottom: 10px;
+}
+section div {
+    padding: unset;
+}
 }

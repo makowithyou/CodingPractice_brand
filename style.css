@@ -66,6 +66,7 @@ img.logo {
 div.header_manu {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 32px;
     margin-bottom: 62px;
 }
